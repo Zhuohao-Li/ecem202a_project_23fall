@@ -15,6 +15,9 @@ Provide a brief overview of the project objhectives, approach, and results.
 
 This section should cover the following items:
 
+We would love to construct an idea on LLM.
+
+
 * Motivation & Objective: What are you trying to do and why? (plain English without jargon)
 * State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
 * Novelty & Rationale: What is new in your approach and why do you think it will be successful?
