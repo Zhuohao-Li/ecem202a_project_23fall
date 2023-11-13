@@ -22,7 +22,7 @@ In an era where information is abundant, the ability to understand, process, and
 Currently, Large Language Models are at the forefront of artificial intelligence research. Models like GPT (Generative Pre-trained Transformer) have shown capabilities in generating coherent and contextually relevant text based on the input they are given[^1]. However, they are not without their limitations. These models often require vast amounts of data to train[^2], can sometimes generate biased or incorrect information[^3],, and lack a deep understanding of the nuances and complexities inherent in human languages[^4].
 
 ### Novelty & Rationale:
-Our research introduces a novel approach: deploying existing LLMs across a variety of devices to examine performance bottlenecks and system compatibilities. We selected several state-of-the-art LLM models which are extremely popular these days, both in research and industry. For example, Llamma-2[^5] from Meta AI, LoRA/QLoRA. Additionally, we plan to choose various deployment platforms ranging from cloud, personal edge devices, computing server, etc. This could help us to understand the capacity of LLMs in current computing platforms and areas.
+Our research introduces a novel approach: deploying existing LLMs across a variety of devices to examine performance bottlenecks and system compatibilities. We selected several state-of-the-art LLM models which are extremely popular these days, both in research and industry. For example, Llamma-2[^5] from Meta AI, LoRA/QLoRA[^6]. Additionally, we plan to choose various deployment platforms ranging from cloud, personal edge devices, computing server, etc. This could help us to understand the capacity of LLMs in current computing platforms and areas.
 
 ### Potential Impact:
 The successful development of an improved LLM has the potential to revolutionize numerous fields. From automating customer service to aiding in creative writing, the applications are vast. Technically, it would signify a leap towards more nuanced AI communication. Broadly, it could enhance education, accessibility, and information dissemination, breaking down language barriers and making knowledge more readily available.
@@ -35,6 +35,8 @@ To undertake this project, a team with expertise in machine learning, natural la
 
 ### Metrics of Success:
 Success will be measured by the model's ability to generate accurate, relevant, and unbiased text across a range of topics and styles. Performance metrics will include the quality and coherence of text, the ability to understand and generate responses to nuanced queries, and feedback from users on its reliability and usefulness. Additionally, adherence to ethical guidelines and the responsible use of the technology will be a crucial metric.
+
+
 
 * Motivation & Objective: What are you trying to do and why? (plain English without jargon)
 * State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
@@ -52,13 +54,13 @@ We did a survey and literrature review about the current and past LLMs.
 Generative Pre-trained Transformers, or GPTs, represent a series of evolutionary steps in the domain of natural language processing and machine learning. Developed by OpenAI, these models have set new benchmarks in the field of AI with their ability to understand and generate human-like text.
 
 GPT-3:
-Introduced in June 2020, GPT-3 (the third generation of the GPT series) astounded the tech world with its 175 billion machine learning parameters. This vast network of parameters allows GPT-3 to engage in tasks such as translation, question-answering, and content creation with remarkable fluency and minimal task-specific training. Its critical technique lies in unsupervised learning from a diverse and extensive corpus of text which enables it to generate contextually rich and varied responses. Evaluation of GPT-3's capabilities has been predominantly qualitative, focusing on its linguistic versatility and the breadth of applications it can adapt to, though quantitative measures such as perplexity scores also showcase its efficiency.
+Introduced in June 2020, GPT-3 (the third generation of the GPT series) astounded the tech world with its 175 billion machine learning parameters[^1]. This vast network of parameters allows GPT-3 to engage in tasks such as translation, question-answering, and content creation with remarkable fluency and minimal task-specific training[^2]. Its critical technique lies in unsupervised learning from a diverse and extensive corpus of text which enables it to generate contextually rich and varied responses. Evaluation of GPT-3's capabilities has been predominantly qualitative, focusing on its linguistic versatility and the breadth of applications it can adapt to, though quantitative measures such as perplexity scores also showcase its efficiency[^2].
 
 GPT-3.5:
-GPT-3.5 serves as an intermediary iteration, an update to GPT-3, fine-tuned and optimized based on user feedback and ongoing research. It is not a full-fledged successor to GPT-3 but rather an enhancement that addresses some of the limitations found in GPT-3, particularly in consistency and factual accuracy. The critical technique employed remains largely the same, with improvements in fine-tuning processes and possibly the inclusion of more data to address gaps identified in GPT-3. Evaluations continue to focus on both qualitative and quantitative aspects, with increased attention to the model's ability to remain coherent over longer conversations and to better handle nuanced instructions.
+GPT-3.5 serves as an intermediary iteration, an update to GPT-3, fine-tuned and optimized based on user feedback and ongoing research[^7]. It is not a full-fledged successor to GPT-3 but rather an enhancement that addresses some of the limitations found in GPT-3, particularly in consistency and factual accuracy. The critical technique employed remains largely the same, with improvements in fine-tuning processes and possibly the inclusion of more data to address gaps identified in GPT-3. Evaluations continue to focus on both qualitative and quantitative aspects, with increased attention to the model's ability to remain coherent over longer conversations and to better handle nuanced instructions.
 
 GPT-4:
-GPT-4, as the successor to GPT-3, is anticipated to be a more advanced version that not only increases the parameter count but also introduces new techniques for training efficiency and output quality. While details are speculative until its release, it is expected that GPT-4 will make strides in addressing issues of bias, ethical use, and misinformation. The critical techniques might involve more sophisticated training algorithms, better contextual understanding, and refined interaction patterns. Evaluation will likely encompass a wide array of benchmarks including ethical alignment, multi-modal abilities (should it support more than text), and the efficiency of learning from fewer examples (few-shot learning).
+GPT-4[^8], as the successor to GPT-3, is anticipated to be a more advanced version that not only increases the parameter count but also introduces new techniques for training efficiency and output quality. While details are speculative until its release, it is expected that GPT-4 will make strides in addressing issues of bias, ethical use, and misinformation. The critical techniques might involve more sophisticated training algorithms, better contextual understanding, and refined interaction patterns. Evaluation will likely encompass a wide array of benchmarks including ethical alignment, multi-modal abilities (should it support more than text), and the efficiency of learning from fewer examples (few-shot learning).
 
 Each of these models represents a leap forward in the capacity of machines to interact with human language, both in understanding and generation. The evolution from GPT-3 to GPT-4 illustrates a trajectory of AI becoming more integrated into daily tasks, emphasizing the need for rigorous evaluation and responsible deployment. The overarching aim of these models is to serve as a versatile and reliable interface between humans and computers, enhancing our ability to communicate with and through technology.
 
@@ -88,9 +90,18 @@ In summary, LoRA represents a significant advancement in the fine-tuning of larg
 # 3. Technical Approach
 
 ## Deployment Environment
+Our goal is to analyze and evaluate the performance of large language models by comparing their deployment across various environments, including high-performance Mac M2, the Hugging Face platform, and Ubuntu servers equipped with NVIDIA A6000 GPUs. The detailed environment are as follow:
+    - Local Environment on Mac M2
+    - Model Management platform Hugging Face
+    - Ubuntu 20.04 with NVIDIA A6000 GPUs
 
 ## Model Selection
-
+We selected different large language models in our experiment, the model details are as follows:
+| model  | #Parameters  | Training Data Raw Size  |  Training Data #Tokens | Training Data #Instances  |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 ## Task Definition
 
 # 4. Evaluation and Results
@@ -105,4 +116,5 @@ In summary, LoRA represents a significant advancement in the fine-tuning of larg
 [^4]: Marcus G. The next decade in AI: four steps towards robust artificial intelligence[J]. arXiv preprint arXiv:2002.06177, 2020.MLA
 [^5]: Llama 2. 2023.11. https://ai.meta.com/llama/
 [^6]: Hu E J, Shen Y, Wallis P, et al. Lora: Low-rank adaptation of large language models[J]. arXiv preprint arXiv:2106.09685, 2021.MLA
-[^7]: 
+[^7]: OpenAI. 2023. GPT3.5. https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates
+[^8]: OpenAI. 2023. GPT4. https://openai.com/gpt-4
