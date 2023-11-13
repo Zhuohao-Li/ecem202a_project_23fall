@@ -19,10 +19,10 @@ Provide a brief overview of the project objhectives, approach, and results.
 In an era where information is abundant, the ability to understand, process, and communicate in natural language is a valuable asset. Large Language Models (LLMs) are designed to bridge the gap between human communication and machine understanding. The primary goal is to create a tool that can interpret and generate human-like text, providing assistance, simplification, and augmentation of our daily informational and communicational tasks. Essentially, we are trying to teach machines the art of human conversation and written communication.
 
 ### State of the Art & Its Limitations:
-Currently, Large Language Models are at the forefront of artificial intelligence research. Models like GPT (Generative Pre-trained Transformer) have shown capabilities in generating coherent and contextually relevant text based on the input they are given. However, they are not without their limitations. These models often require vast amounts of data to train, can sometimes generate biased or incorrect information, and lack a deep understanding of the nuances and complexities inherent in human languages.
+Currently, Large Language Models are at the forefront of artificial intelligence research. Models like GPT (Generative Pre-trained Transformer) have shown capabilities in generating coherent and contextually relevant text based on the input they are given[^1]. However, they are not without their limitations. These models often require vast amounts of data to train[^2], can sometimes generate biased or incorrect information[^3],, and lack a deep understanding of the nuances and complexities inherent in human languages[^4].
 
 ### Novelty & Rationale:
-Our approach involves in deploying existing LLMs on different devices to look at the bottleneck and perforamce on various platforms and systems. We selected several state-of-the-art LLM models which are extremely popular these days, both in research and industry. For example, Llamma-2 from Meta AI, LoRA/QLoRA. Additionally, we plan to choose various deployment platforms ranging from cloud, personal edge devices, computing server, etc. This could help us to understand the capacity of LLMs in current computing platforms and areas.
+Our research introduces a novel approach: deploying existing LLMs across a variety of devices to examine performance bottlenecks and system compatibilities. We selected several state-of-the-art LLM models which are extremely popular these days, both in research and industry. For example, Llamma-2[^5] from Meta AI, LoRA/QLoRA. Additionally, we plan to choose various deployment platforms ranging from cloud, personal edge devices, computing server, etc. This could help us to understand the capacity of LLMs in current computing platforms and areas.
 
 ### Potential Impact:
 The successful development of an improved LLM has the potential to revolutionize numerous fields. From automating customer service to aiding in creative writing, the applications are vast. Technically, it would signify a leap towards more nuanced AI communication. Broadly, it could enhance education, accessibility, and information dissemination, breaking down language barriers and making knowledge more readily available.
@@ -98,3 +98,11 @@ In summary, LoRA represents a significant advancement in the fine-tuning of larg
 # 5. Discussion and Conclusions
 
 # 6. References
+
+[^1]:Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]. Advances in neural information processing systems, 2020, 33: 1877-1901
+[^2]:  Kaplan J, McCandlish S, Henighan T, et al. Scaling laws for neural language models[J]. arXiv preprint arXiv:2001.08361, 2020.
+[^3]: Bender E M, Gebru T, McMillan-Major A, et al. On the dangers of stochastic parrots: Can language models be too big?🦜[C]//Proceedings of the 2021 ACM conference on fairness, accountability, and transparency. 2021: 610-623.MLA
+[^4]: Marcus G. The next decade in AI: four steps towards robust artificial intelligence[J]. arXiv preprint arXiv:2002.06177, 2020.MLA
+[^5]: Llama 2. 2023.11. https://ai.meta.com/llama/
+[^6]: Hu E J, Shen Y, Wallis P, et al. Lora: Low-rank adaptation of large language models[J]. arXiv preprint arXiv:2106.09685, 2021.MLA
+[^7]: 
