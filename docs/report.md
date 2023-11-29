@@ -46,7 +46,7 @@ Success will be measured by the model's ability to generate accurate, relevant, 
 
 # 2. Related Work
 
-We did a survey and literrature review about the current and past LLMs.
+We did a following survey and literrature review about the current and past LLMs.
 
 ## GPT-3 Family Associated with GPT-4
 Generative Pre-trained Transformers, or GPTs, represent a series of evolutionary steps in the domain of natural language processing and machine learning. Developed by OpenAI, these models have set new benchmarks in the field of AI with their ability to understand and generate human-like text.
@@ -89,6 +89,21 @@ In summary, LoRA represents a significant advancement in the fine-tuning of larg
 
 ## Deployment Environment
 
+We deployed our LLMs including original ones and fine-tuned families on there different environments ranging from embedded systems, edge devices, and cloud or server. The details are following like this:
+
+* Edge devices/embedded system: M2 Chip on Mac 
+
+    * OS:
+    * Hardware:
+
+* Cloud: [Hugging Face](https://huggingface.co/)
+
+* GPU server: 
+
+    * OS:
+    * Hardware: 3 A6000 GPU(48GB), 
+    
+
 ## Model Selection
 
 ## Task Definition
@@ -98,3 +113,10 @@ In summary, LoRA represents a significant advancement in the fine-tuning of larg
 # 5. Discussion and Conclusions
 
 # 6. References
+[1] Attention is all you need. (NeurIPS 2017)
+
+[2] Llama 2: Open foundation and fine-tuned chat models. 
+
+[3] LoRA: Low-Rank Adaptation of Large Language Models. 
+
+[4] QLoRA: Efficient Finetuning of Quantized LLMs
