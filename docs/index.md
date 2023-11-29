@@ -10,7 +10,7 @@ This project presents a comprehensive analysis of deploying various **Large Lang
 
 # Team
 
-* Zhuohao Li 
+* [Zhuohao Li](https://github.com/Zhuohao-Li)
 * Ying Li
 
 # Required Submissions
