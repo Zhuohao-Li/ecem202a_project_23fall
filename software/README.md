@@ -1,3 +1,11 @@
+<!--
+ * @Author: Garrick
+ * @LastEditTime: 2023-12-10 13:04:42
+ * @FilePath: /ecem202a_project_23fall/software/README.md
+ * zhuohaol@ucla.edu
+ * Copyright (c) 2023 by Zhuohao Li, All Rights Reserved.
+-->
+
 # Quantifying LLMs Accuracy and Latency
 
 In this folder, we open-sourced our code for quantifying LLMs accuracy and latency. We deployed current and recent popular large models in different environments.
