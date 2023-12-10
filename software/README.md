@@ -1,6 +1,6 @@
 <!--
  * @Author: Garrick
- * @LastEditTime: 2023-12-10 13:04:42
+ * @LastEditTime: 2023-12-10 13:14:44
  * @FilePath: /ecem202a_project_23fall/software/README.md
  * zhuohaol@ucla.edu
  * Copyright (c) 2023 by Zhuohao Li, All Rights Reserved.
@@ -40,4 +40,30 @@ Hugging Face is widely used by the following features:
 
 ### GPU server
 
-Our server is supported by
+Our server is supported by the following information:
+
+```shell
+GPU server:~$ cat /etc/os-release
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+```
+
+- Memory: 125GB
+
+- Storage: 1.5T
+
+- CPU: 16\* Intel(R) Xeon(R) Gold 5222 CPU @ 3.80GHz
+
+- GPU: 3\* NVIDIA RTX A6000 (48GB)
+
+- CUDA version: r12.2
