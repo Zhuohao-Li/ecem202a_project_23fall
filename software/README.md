@@ -1,10 +1,4 @@
-<!--
- * @Author: Garrick
- * @LastEditTime: 2023-12-10 20:37:24
- * @FilePath: /ecem202a_project_23fall/software/README.md
- * zhuohaol@ucla.edu
- * Copyright (c) 2023 by Zhuohao Li, All Rights Reserved.
--->
+
 
 # Quantifying LLMs Accuracy and Latency
 
