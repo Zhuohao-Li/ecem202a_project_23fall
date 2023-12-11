@@ -1,6 +1,6 @@
 <!--
  * @Author: Garrick
- * @LastEditTime: 2023-12-10 13:14:44
+ * @LastEditTime: 2023-12-10 20:37:24
  * @FilePath: /ecem202a_project_23fall/software/README.md
  * zhuohaol@ucla.edu
  * Copyright (c) 2023 by Zhuohao Li, All Rights Reserved.
@@ -35,6 +35,10 @@ Hugging Face is widely used by the following features:
 - **Accessibility**: The Transformers library democratizes access to state-of-the-art NLP models, allowing both academics and industry professionals to leverage advanced models without the need for extensive computational resources.
 
 - **Ease of Use**: The library is designed to be user-friendly, with a high-level interface for various NLP tasks, simplifying the process of applying AI in practical applications.
+
+**Our Hugging Face Settings:**
+
+We utilize [Colab](https://colab.google/) from Google to better deploy our LLMs on Cloud, the runtime we select is **NVIDIA V100 / A100 GPU**. All the code in `Hugging-face` could be executed online by notebook with the name `ipynb`.
 
 ### MacOS
 
