@@ -1,11 +1,12 @@
 # Table of Contents
-* Abstract
-* [Introduction](#1-introduction)
-* [Related Work](#2-related-work)
-* [Technical Approach](#3-technical-approach)
-* [Evaluation and Results](#4-evaluation-and-results)
-* [Discussion and Conclusions](#5-discussion-and-conclusions)
-* [References](#6-references)
+
+- Abstract
+- [Introduction](#1-introduction)
+- [Related Work](#2-related-work)
+- [Technical Approach](#3-technical-approach)
+- [Evaluation and Results](#4-evaluation-and-results)
+- [Discussion and Conclusions](#5-discussion-and-conclusions)
+- [References](#6-references)
 
 # Abstract
 
@@ -13,44 +14,48 @@ Provide a brief overview of the project objhectives, approach, and results.
 
 # 1. Introduction
 
-
-
 ### Motivation & Objective:
+
 In an era where information is abundant, the ability to understand, process, and communicate in natural language is a valuable asset. Large Language Models (LLMs) are designed to bridge the gap between human communication and machine understanding. The primary goal is to create a tool that can interpret and generate human-like text, providing assistance, simplification, and augmentation of our daily informational and communicational tasks. Essentially, we are trying to teach machines the art of human conversation and written communication.
 
 ### State of the Art & Its Limitations:
+
 Currently, Large Language Models are at the forefront of artificial intelligence research. Models like GPT (Generative Pre-trained Transformer) have shown capabilities in generating coherent and contextually relevant text based on the input they are given[^1]. However, they are not without their limitations. These models often require vast amounts of data to train[^2], can sometimes generate biased or incorrect information[^3],, and lack a deep understanding of the nuances and complexities inherent in human languages[^4].
 
 ### Novelty & Rationale:
+
 Our research introduces a novel approach: deploying existing LLMs across a variety of devices to examine performance bottlenecks and system compatibilities. We selected several state-of-the-art LLM models which are extremely popular these days, both in research and industry. For example, Llamma-2[^5] from Meta AI, LoRA/QLoRA[^6]. Additionally, we plan to choose various deployment platforms ranging from cloud, personal edge devices, computing server, etc. This could help us to understand the capacity of LLMs in current computing platforms and areas.
 
 ### Potential Impact:
+
 The successful development of an improved LLM has the potential to revolutionize numerous fields. From automating customer service to aiding in creative writing, the applications are vast. Technically, it would signify a leap towards more nuanced AI communication. Broadly, it could enhance education, accessibility, and information dissemination, breaking down language barriers and making knowledge more readily available.
 
 ### Challenges:
+
 One of the greatest challenges is ensuring that the model can discern context and handle the subtleties of human language without perpetuating biases or misinformation. The complexity of language means that even small errors can significantly alter the meaning of the generated text. Additionally, the ethical use and potential misuse of LLMs pose a risk that must be carefully managed.
 
 ### Requirements for Success:
+
 To undertake this project, a team with expertise in machine learning, natural language processing, and ethics in AI is essential. Access to large datasets, powerful computational resources, and a framework for ongoing evaluation against ethical standards are also necessary components for success.
 
 ### Metrics of Success:
+
 Success will be measured by the model's ability to generate accurate, relevant, and unbiased text across a range of topics and styles. Performance metrics will include the quality and coherence of text, the ability to understand and generate responses to nuanced queries, and feedback from users on its reliability and usefulness. Additionally, adherence to ethical guidelines and the responsible use of the technology will be a crucial metric.
 
-
-
-* Motivation & Objective: What are you trying to do and why? (plain English without jargon)
-* State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
-* Novelty & Rationale: What is new in your approach and why do you think it will be successful?
-* Potential Impact: If the project is successful, what difference will it make, both technically and broadly?
-* Challenges: What are the challenges and risks?
-* Requirements for Success: What skills and resources are necessary to perform the project?
-* Metrics of Success: What are metrics by which you would check for success?
+- Motivation & Objective: What are you trying to do and why? (plain English without jargon)
+- State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
+- Novelty & Rationale: What is new in your approach and why do you think it will be successful?
+- Potential Impact: If the project is successful, what difference will it make, both technically and broadly?
+- Challenges: What are the challenges and risks?
+- Requirements for Success: What skills and resources are necessary to perform the project?
+- Metrics of Success: What are metrics by which you would check for success?
 
 # 2. Related Work
 
 We did a following following survey and literrature review about the current and past LLMs.
 
 ## GPT-3 Family Associated with GPT-4
+
 Generative Pre-trained Transformers, or GPTs, represent a series of evolutionary steps in the domain of natural language processing and machine learning. Developed by OpenAI, these models have set new benchmarks in the field of AI with their ability to understand and generate human-like text.
 
 GPT-3:
@@ -65,12 +70,14 @@ GPT-4[^8], as the successor to GPT-3, is anticipated to be a more advanced versi
 Each of these models represents a leap forward in the capacity of machines to interact with human language, both in understanding and generation. The evolution from GPT-3 to GPT-4 illustrates a trajectory of AI becoming more integrated into daily tasks, emphasizing the need for rigorous evaluation and responsible deployment. The overarching aim of these models is to serve as a versatile and reliable interface between humans and computers, enhancing our ability to communicate with and through technology.
 
 ## Llamma-2 Family
+
 Llama-2, standing as a speculative successor to a hypothetical Llama-1 language model, would embody the next step in natural language processing and AI-driven linguistic tasks. This model, in the realm of machine learning, would likely aim to eclipse its predecessor in understanding and generating human-like text with higher precision and broader contextual awareness.
 
 Critical Technique:
 Assuming advancements along the lines of its contemporaries, Llama-2's critical technique would probably involve a combination of unsupervised and supervised learning, likely harnessing a transformer-based architecture renowned for its effectiveness in handling sequential data. The model would plausibly incorporate larger datasets, more refined parameter tuning, and potentially innovative approaches to reduce bias and improve the model's ability to grasp nuanced text. Advances in few-shot learning, where the model generates accurate responses with minimal input, could also be a focus, alongside multi-modal capabilities that integrate text with other data types like images or sounds.
 
 ## Fine-tuning LLMs Family
+
 LoRA, which stands for Low-Rank Adaptation, is an innovative technique designed to enhance the capabilities of large pre-trained language models such as GPT-3. Developed with the intent to fine-tune these vast models more efficiently, LoRA focuses on the adaptability of neural networks without the need for significant architectural changes or the extensive computational cost typically associated with training large-scale AI models.
 
 Critical Technique:
@@ -90,33 +97,32 @@ In summary, LoRA represents a significant advancement in the fine-tuning of larg
 # 3. Technical Approach
 
 ## Deployment Environment
-Our goal is to analyze and evaluate the performance of large language models by comparing their deployment across various environments, including high-performance Mac M2, the Hugging Face platform, and Ubuntu servers equipped with NVIDIA A6000 GPUs. The detailed environment are as follow:
-    - Local Environment on Mac M2
-    - Model Management platform Hugging Face
-    - Ubuntu 20.04 with NVIDIA A6000 GPUs
+
+Our goal is to analyze and evaluate the performance of large language models by comparing their deployment across various environments, including high-performance Mac M2, the Hugging Face platform, and Ubuntu servers equipped with NVIDIA A6000 GPUs. The detailed environment are as follow: - Local Environment on Mac M2 - Model Management platform Hugging Face - Ubuntu 20.04 with NVIDIA A6000 GPUs
 
 We deployed our LLMs including original ones and fine-tuned families on there different environments ranging from embedded systems, edge devices, and cloud or server. The details are following like this:
 
-* Edge devices/embedded system: M2 Chip on Mac 
+- Edge devices/embedded system: M2 Chip on Mac
 
-    * OS:
-    * Hardware:
+  - OS:
+  - Hardware:
 
-* Cloud: [Hugging Face](https://huggingface.co/)
+- Cloud: [Hugging Face](https://huggingface.co/)
 
-* GPU server: 
+- GPU server:
 
-    * OS:
-    * Hardware: 3 A6000 GPU(48GB), 
-    
+  - OS:
+  - Hardware: 3 A6000 GPU(48GB),
 
 ## Model Selection
+
 We selected different large language models in our experiment, the model details are as follows:
-| model  | #Parameters  | Training Data Raw Size  |  Training Data #Tokens | Training Data #Instances  |
+| model | #Parameters | Training Data Raw Size | Training Data #Tokens | Training Data #Instances |
 |---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+| | | | | |
+| | | | | |
+| | | | | |
+
 ## Task Definition
 
 # 4. Evaluation and Results
@@ -125,26 +131,11 @@ We selected different large language models in our experiment, the model details
 
 # 6. References
 
-[^1]:Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]. Advances in neural information processing systems, 2020, 33: 1877-1901
-
-[^2]:  Kaplan J, McCandlish S, Henighan T, et al. Scaling laws for neural language models[J]. arXiv preprint arXiv:2001.08361, 2020.
-
+[^1]: Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]. Advances in neural information processing systems, 2020, 33: 1877-1901
+[^2]: Kaplan J, McCandlish S, Henighan T, et al. Scaling laws for neural language models[J]. arXiv preprint arXiv:2001.08361, 2020.
 [^3]: Bender E M, Gebru T, McMillan-Major A, et al. On the dangers of stochastic parrots: Can language models be too big?🦜[C]//Proceedings of the 2021 ACM conference on fairness, accountability, and transparency. 2021: 610-623.MLA
-
 [^4]: Marcus G. The next decade in AI: four steps towards robust artificial intelligence[J]. arXiv preprint arXiv:2002.06177, 2020.MLA
-
 [^5]: Llama 2. 2023.11. https://ai.meta.com/llama/
-
 [^6]: Hu E J, Shen Y, Wallis P, et al. Lora: Low-rank adaptation of large language models[J]. arXiv preprint arXiv:2106.09685, 2021.MLA
-
 [^7]: OpenAI. 2023. GPT3.5. https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates
-
 [^8]: OpenAI. 2023. GPT4. https://openai.com/gpt-4
-
-[^9] Attention is all you need. (NeurIPS 2017)
-
-[^10] Llama 2: Open foundation and fine-tuned chat models. 
-
-[^11] LoRA: Low-Rank Adaptation of Large Language Models. 
-
-[^12] QLoRA: Efficient Finetuning of Quantized LLMs
