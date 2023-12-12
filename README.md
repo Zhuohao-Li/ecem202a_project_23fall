@@ -1,5 +1,5 @@
 # ecem202a/csm213a_project
-This is repository template for UCLA ECEM202A / CSM213A projects.
+This is repository for ECEM202A / CSM213A projects (2023fall).
 
 The repo is organized by this:
 
