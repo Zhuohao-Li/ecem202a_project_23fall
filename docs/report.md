@@ -108,8 +108,8 @@ We deployed our LLMs including original ones and fine-tuned families on there di
 
 - Edge devices/embedded system: M2 Chip on Mac
 
-  - OS:
-  - Hardware:
+  - OS: macOS Monterey(Version 12.5)
+  - Chip: Apple M2 
 
 - Cloud: [Hugging Face](https://huggingface.co/)
 
@@ -123,10 +123,10 @@ We deployed our LLMs including original ones and fine-tuned families on there di
 ## Model Selection
 
 We selected different large language models in our experiment, the model details are as follows:
-| model | #Parameters | Training Data Raw Size | Training Data #Tokens | Training Data #Instances |
+| model | #Parameters | Context Length | Training Data #Tokens | LR |
 |---|---|---|---|---|
-| Llama-2 7B| | | | |
-| Llama-2 13B| | | | |
+| Llama-2 7B| 7B | 4k |2000B | $3.0 \times 10^{-4}$|
+| Llama-2 13B| 13B| 4k |2000B | $3.0 \times 10^{-4}$ |
 | | | | | |
 
 ## Task Definition
@@ -156,10 +156,10 @@ In evaluating the performance of large language models such as LLaMA-2, a compre
 
 # 4. Evaluation and Results
 
-| model       | #Parameters | Training Data Raw Size | Training Data #Tokens | Training Data #Instances |
+| Task       | Model | Testset Count | Accuracy | Latency |
 | ----------- | ----------- | ---------------------- | --------------------- | ------------------------ |
-| Llama-2 7B  |             |                        |                       |                          |
-| Llama-2 13B |             |                        |                       |                          |
+|  Text Classification |  Llama-2 7B           |                        |                       |                          |
+|  Text Classification   |     Llama-2 13B                   |                       |                          |
 |             |             |                        |                       |                          |
 
 # 5. Discussion and Conclusions
