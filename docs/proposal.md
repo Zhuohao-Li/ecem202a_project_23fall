@@ -53,7 +53,7 @@ List the key papers that you have identified relating to your project idea, and 
 #### The era of Large Language Models
 The GPT series, starting with GPT[^11], demonstrated the capabilities of large-scale language models in generating coherent and contextually relevant text. Subsequent iterations, including GPT-2 and GPT-3, scaled up in terms of parameter count and training data, pushing the boundaries of model performance[^1]. Similarly, BERT and its variants improved performance in understanding context and nuances in language[^12].
 
-#####TODO: ying-add llama
+In a parallel development, Meta AI introduced LLaMA[^15],  a collection of pretrained and fine-tuned large language models (LLMs) ranging in scale from 7 billion to 70 billion parameters, which offers a range of foundation models for research, characterized by their accessibility and adaptability for various applications in natural language processing. Different from GPT-series models, which are fully black-box models, LLaMA allows users to fine-tune the model using their own data.
 
 #### Evaluating Performance: Latency and Accuracy
 While large language models achieved high accuracy, their practical deployment often faced challenges due to latency issues. Rajpurkar et al[^9] studied on models like SQuAD and others in the domain of question answering began to highlight the trade-offs between accuracy and latency. Further research by Wang et al.[^10] on GLUE and SuperGLUE benchmarks provided comprehensive frameworks for evaluating language models but did not focus extensively on latency.
@@ -90,5 +90,6 @@ In our project, several software tools and platforms will be utilized. These hav
 [^12]: Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
 [^13]:Paszke A, Gross S, Massa F, et al. Pytorch: An imperative style, high-performance deep learning library[J]. Advances in neural information processing systems, 2019, 32.
 [^14]:Wolf T, Debut L, Sanh V, et al. Transformers: State-of-the-art natural language processing[C]//Proceedings of the 2020 conference on empirical methods in natural language processing: system demonstrations. 2020: 38-45.
+[^15]:Touvron H, Martin L, Stone K, et al. Llama 2: Open foundation and fine-tuned chat models[J]. arXiv preprint arXiv:2307.09288, 2023.
 
 
