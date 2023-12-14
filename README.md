@@ -10,6 +10,6 @@ The repo is organized by this:
 
 * `doc/` for website content
 * `software/` for code used in the project
-* `data/` for data data used in the project
+* `data/` for data and tasks used in the project
 
 
