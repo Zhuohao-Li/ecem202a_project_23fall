@@ -41,15 +41,15 @@ Success will be measured by the model's ability to generate accurate, relevant, 
 
 | Team member  | Task  | 
 |---|---|
-| Zhuohao Li  |   | 
-| Ying Li  |   | 
+| Zhuohao Li  | Deploy LLMs on Cloud; Quantified performance by tasks; PPT; GitHub repo  | 
+| Ying Li  |  Deploy LLMs on Edge and Server; Quantified performance by tasks; PPT; Web | 
 
 
 
 ## 9. Related Work
 
 ### 9.a. Papers
-List the key papers that you have identified relating to your project idea, and describe how they related to your project. Provide references (with full citation in the References section below).
+We did the following literature review.
 #### The era of Large Language Models
 The GPT series, starting with GPT[^11], demonstrated the capabilities of large-scale language models in generating coherent and contextually relevant text. Subsequent iterations, including GPT-2 and GPT-3, scaled up in terms of parameter count and training data, pushing the boundaries of model performance[^1]. Similarly, BERT and its variants improved performance in understanding context and nuances in language[^12].
 
@@ -63,7 +63,14 @@ While large language models achieved high accuracy, their practical deployment o
 
 ### 9.b. Datasets
 
-List datasets that you have identified and plan to use. Provide references (with full citation in the References section below).
+We used 3 different catagories of defined tasks to meassure the performance of each deployment. Machine translation, text classification, and QA.
+
+In Machine translation, we use the popular **[OpenSubtitles](https://opus.nlpl.eu/OpenSubtitles2016.php)** datasets to perform the translation from English to Chinese.
+
+In text classification tasks, TODO!!!!!!!
+
+In QA (mathematics solving), we use the datasets developed by Google Deepmind to test the ability of logic reasoning of a LLM. The original paper is [Analysing Mathematical
+Reasoning Abilities of Neural Models](https://openreview.net/pdf?id=H1gR5iR5FX).
 
 ### 9.c. Software
 
