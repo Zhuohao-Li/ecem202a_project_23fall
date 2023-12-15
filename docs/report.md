@@ -84,6 +84,9 @@ Meta has released Llamma-2 **small(7B)**, **medium(13B)**, and **large(70B)** mo
 
 Assuming advancements along the lines of its contemporaries, Llama-2's critical technique would probably involve a combination of unsupervised and supervised learning, likely harnessing a transformer-based architecture renowned for its effectiveness in handling sequential data. The model would plausibly incorporate larger datasets, more refined parameter tuning, and potentially innovative approaches to reduce bias and improve the model's ability to grasp nuanced text. Advances in few-shot learning, where the model generates accurate responses with minimal input, could also be a focus, alongside multi-modal capabilities that integrate text with other data types like images or sounds.
 
+## Falcon
+Falcon[^9] is the state-of-the-art open-source model, a large language model (LLM) that was developed by the Technology Innovation Institute (TII). Falcon LLM is trained on a massive dataset of text and code, and it can be used for a wide range of natural language processing (NLP) tasks, including text generation, question answering, and summarization.
+
 ## Fine-tuning LLMs
 
 **LoRA**, which stands for Low-Rank Adaptation, is an innovative technique designed to enhance the capabilities of large pre-trained language models such as GPT-3. Developed with the intent to fine-tune these vast models more efficiently, LoRA focuses on the adaptability of neural networks without the need for significant architectural changes or the extensive computational cost typically associated with training large-scale AI models.
@@ -156,11 +159,29 @@ In evaluating the performance of large language models such as LLaMA-2, a compre
 
 # 4. Evaluation and Results
 
-| Task       | Model | Testset Count | Accuracy | Latency |
-| ----------- | ----------- | ---------------------- | --------------------- | ------------------------ |
-|  Text Classification |  Llama-2 7B           |                        |                       |                          |
-|  Text Classification   |     Llama-2 13B                   |                       |                          |
-|             |             |                        |                       |                          |
+## Result——Accuracy
+|  Model     | deployment   | MT  | TC    | QA    |
+| ---------- | ------------ | --- | ----- | ----- |
+| LLaMA2-7B  | Nvidia-A6000 | 60% | 0     | ~13%  |
+| LLaMA2-13B | Nvidia-A6000 | 73% | 40%   | ~38%  |
+| LLaMA2-7B  | MAC-M2       | /   | /     | /     |
+| LLaMA2-7B  | Cloud        | 60% | 0%    | ~13%  |
+| LLaMA2-13B | Cloud        | 73% | 40%   | ~38%  |
+| Falcon-7B  | Nvidia-A6000 | 68% | 87.5% | ~29*% |
+| Falcon-7B  | MAC M2       | /   | /     | /     |
+| Falcon-7B  | Cloud        | 68% | 87.5% | ~29*% |
+
+## Result——Latency
+|  Model     | deployment   | MT  | TC    | QA    |
+| ---------- | ------------ | --- | ----- | ----- |
+| LLaMA2-7B  | Nvidia-A6000 | 420s/rq | 8s/rq     | 16.93s/rq  |
+| LLaMA2-13B | Nvidia-A6000 | 510s/rq |   |   |
+| LLaMA2-7B  | MAC-M2       | /   | /     | /     |
+| LLaMA2-7B  | Cloud        | 391s/rq | 0%    | 9.3s/rq  |
+| LLaMA2-13B | Cloud        | 124s/rq |   | 2.3s/rq  |
+| Falcon-7B  | Nvidia-A6000 | 412s/rq | 3.93s/rq | 8.25s/rq |
+| Falcon-7B  | MAC M2       | /   | /     | /     |
+| Falcon-7B  | Cloud        | 375s/rq |   | 2.9s/rq |
 
 # 5. Discussion and Conclusions
 
@@ -174,3 +195,4 @@ In evaluating the performance of large language models such as LLaMA-2, a compre
 [^6]: Hu E J, Shen Y, Wallis P, et al. Lora: Low-rank adaptation of large language models[J]. arXiv preprint arXiv:2106.09685, 2021.MLA
 [^7]: OpenAI. 2023. GPT3.5. https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates
 [^8]: OpenAI. 2023. GPT4. https://openai.com/gpt-4
+[^9]: ZXhang Y X, Haxo Y M, Mat Y X. Falcon LLM: A New Frontier in Natural Language Processing[J]. AC Investment Research Journal, 2023, 220(44).
