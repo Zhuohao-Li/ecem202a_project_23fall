@@ -145,9 +145,6 @@ In evaluating the performance of large language models such as LLaMA-2, a compre
 3. **Text Generation**
    Objective: To evaluate the model's capability in generating coherent, relevant, and creative text.
    Tasks: Story generation, dialogue creation, content summarization.
-4. **Named Entity Recognition (NER)**
-   Objective: To assess the model's proficiency in identifying named entities (such as names, places, organizations) in text.
-   Typical Datasets: CoNLL-2003 NER and others.
 5. **Natural Language Inference (NLI)**
    Objective: To evaluate the model's ability in inferring the relationship between text fragments (e.g., contradiction, entailment).
    Typical Datasets: SNLI (Stanford Natural Language Inference), MultiNLI.
@@ -184,6 +181,15 @@ In evaluating the performance of large language models such as LLaMA-2, a compre
 | Falcon-7B  | Cloud        | 375s/rq |   | 2.9s/rq |
 
 # 5. Discussion and Conclusions
+According to our experiment results, we have drew the following conclusions:
+1. Accuracy didn’t differ a lot on different platforms: The “ability” to inference is determined by model itself.
+2. Latency is dependent by different deployment platform: The configuration of the platform could affect latency, it could be afftected by the following factors: emory, inference framework, GPU runtime, etc
+3. Different tasks also have an effect on latency: As we can see from Section4, Mathematics reasoning has an explicit higher latency than sentiment analysis
+4. Lightweight deployment of LLM across different edge platforms with low latency remains a challenge. For example, when we deployed the model Falcon-7B on MAC M2 for use, it could load the model for a so long time longer than 1 hour, as the model has a high requirements for the device memory(15GB). So the MAC with 16GB memory is hard to run it successfully.
+ 
+
+
+
 
 # 6. References
 
