@@ -3,6 +3,7 @@ import transformers
 import torch
 import time
 
+# instruct model
 model = "tiiuae/falcon-7b-instruct"
 
 tokenizer = AutoTokenizer.from_pretrained(model)
