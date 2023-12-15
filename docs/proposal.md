@@ -67,7 +67,7 @@ We used 3 different catagories of defined tasks to meassure the performance of e
 
 In Machine translation, we use the popular **[OpenSubtitles](https://opus.nlpl.eu/OpenSubtitles2016.php)** datasets to perform the translation from English to Chinese.
 
-In text classification tasks, TODO!!!!!!!
+In text classification tasks, we use the [SST-2(Stanford sentiment treebank V2)](https://huggingface.co/datasets/sst2)  datasets to perform the sentiment analysis. Given each sentence, it could be classified into positive or negative. 
 
 In QA (mathematics solving), we use the datasets developed by Google Deepmind to test the ability of logic reasoning of a LLM. The original paper is [Analysing Mathematical
 Reasoning Abilities of Neural Models](https://openreview.net/pdf?id=H1gR5iR5FX).
