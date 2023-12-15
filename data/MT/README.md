@@ -29,4 +29,4 @@ The OpenSubtitles Chinese-English dataset is part of the larger OpenSubtitles co
 
 The exact size of the Chinese-English portion we used  comprising **3M** of sentence pairs. The dataset usually comes in a parallel format, with Chinese sentences aligned with their English translations. This format is particularly useful for training and evaluating machine translation systems.
 
-The data we're gonna use are stored in `./en-zh.txt` folder including English version and Chinese version.
+The data we're gonna use are stored in `./en-zh.txt` folder including English version (`OpenSubtitles.edn-zh.en`) and Chinese version (`OpenSubtitles.edn-zh.zn`).
