@@ -16,15 +16,15 @@ tokenizer = AutoTokenizer.from_pretrained(model)
 pipe = pipeline(
     "text-generation",
     model=model,
-    tokenizer=tokenizer,  # 添加分词器
+    tokenizer=tokenizer,  # add tokenizer
     torch_dtype=torch.float16,
-    device=0 if torch.cuda.is_available() else -1,  # 确保使用GPU（如果可用）
+    device=0 if torch.cuda.is_available() else -1,  # ensure GPU runtime
 )
 
-# 开始计时
+# begin of time
 start_time = time.time()
 
-# 进行模型推理
+# use transformer to inference
 sequences = pipe(
     'Who created Apple inc?\n',
     do_sample=True,
@@ -34,13 +34,13 @@ sequences = pipe(
     max_length=400,
 )
 
-# 结束计时
+# end of time
 end_time = time.time()
 
-# 计算运行时间
+# runtime
 elapsed_time = end_time - start_time
 print(f"Inference took {elapsed_time} seconds.")
 
-# 打印结果
+# print results
 for seq in sequences:
     print(f"Result: {seq['generated_text']}")
