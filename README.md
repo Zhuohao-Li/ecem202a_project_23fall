@@ -1,4 +1,4 @@
-# ecem202a/csm213a_project
+# ECE M202A/CS M213A Project
 This is repository for ECEM202A / CSM213A projects (2023fall).
 
 ## Project: Quantifying Accuracy-Latency in LLMs
