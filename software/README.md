@@ -36,6 +36,8 @@ We utilize [Colab](https://colab.google/) from Google to better deploy our LLMs 
 
 ### MacOS
 
+Power by Apple Silicon M2 (16GB)
+
 ### GPU server
 
 Our server is supported by the following information:
