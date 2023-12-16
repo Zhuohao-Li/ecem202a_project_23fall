@@ -12,4 +12,8 @@ The repo is organized by this:
 * `software/` for code used in the project
 * `data/` for data and tasks used in the project
 
+Our project website is availble on [https://bu9gy.github.io/](https://bu9gy.github.io/)
+
+Our code is open-soruced and copyright by MIT licence.
+
 
